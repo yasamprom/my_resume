@@ -1,0 +1,239 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+%----------HEADING----------
+\vspace*{-1.5cm}
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\Large Stepan Strunkov}}
+  \hspace{17ex} \href{https://www.linkedin.com/in/stepan-strunkov-b84367224/}{\color{blue}LinkedIn} & Email : \href{mailto:stepa.strunkov@gmail.com}{\color{blue}stepa.strunkov@gmail.com}\\
+  \href{https://github.com/yasamprom}{\color{blue}github/yasamprom}
+  \hspace{23ex} tg: \href{https://t.me/bryansk_sever111}{\color{blue}bryansk\_sever111} \\
+\end{tabular*}
+
+
+\setlength{\headheight}{20pt}
+\setlength{\headsep}{5pt}
+
+
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {National Research University Higher School of Economics}{Moscow, Russia}
+      {Computer Science, distributed systems}{Sep. 2020 -- 2024 (Present)}
+
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+	\resumeSubheading
+	{Middle software engineer, PFL Advisors. (Go, Python)}{April 2023 -- Present}
+	{}{Moscow}
+	\resumeItemListStart
+	\resumeItem{\normalsize{Developed financial microservices using Go and Python. Implemented service for streaming stock prices to clients. Worked with message brokers  (RabbitMQ), SQL databases, wrote migrations (used Alembic) and covered code with tests. Integrated services  with third-party APIs.}}
+	\resumeItem{\normalsize{Took part in architecture planning.  Planned and developed http service for generating bills and receiving payments from customers. Payments were based on bank API. Used fastapi and worked with sqlalchemy ORM, wrote mock tests. Tuned docker-compose for deploy.}}
+	\resumeItemListEnd
+	
+	\resumeSubheading
+	{Junior software engineer, Huawei (python)}{April 2022 -- March 2023}
+	{}{Moscow}
+	\resumeItemListStart
+	\resumeItem{\normalsize{Implemented JetBrains \href{https://github.com/objectionary/eo-intellij-plugin}{\color{blue}plugin} with syntax highlighting and many other features for \href{https://github.com/objectionary/eo}{\color{blue}eolang} using Java, ANTLR and Gradle. Wrote unit tests for new language features.}}
+	\resumeItem{\normalsize{Tuned fully automated pipeline on github including linter, building, testing, code coverage analysis and release workflow (CI/CD)}}
+	\resumeItem{\normalsize{Contributed to \href{https://github.com/objectionary/eo}{\color{blue}eolang} with 700+ github stars. Fixed many bugs and worked in a big team.}}
+	\resumeItem{\normalsize{Worked with Python clangd RPC server for processing C/C++ code. Wrote unit tests}}
+	\resumeItem{\normalsize{Implemented and tested http server which runs clangd locally and can process remote queries (Python)}}
+	\resumeItemListEnd
+	
+	\resumeSubheading
+	{Software engineer, BOTTEC (python)}{May 2021 -- Dec 2021}
+	{}{Moscow}
+	\resumeItemListStart
+	\resumeItem{\normalsize{Developed and hosted bots on company server using Docker and docker-compose}}
+	\resumeItem{\normalsize{Almost all bots used few API's and some of them were connected to databases (MongoDB).}}
+	\resumeItem{\normalsize{One of bots was a full value product for working with maps. Bot could save many points and display them on map (MapHub API)}}
+	\resumeItemListEnd
+
+
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+     \resumeProjectHeading
+    {\textbf{\href{https://t.me/spy_car_bot}{\color{blue}@spy\_car\_bot} you may test now:) } $|$ \emph{Python, AIogram, Asyncio, Docker, Postgres, RabbitMQ}}{}
+    \resumeItemListStart
+    \resumeItem{\normalsize{Developed telegram bot for receiving urgent notifications when relevant car is posted for sale}}
+    \resumeItem{\normalsize{Wrote few microservices for receiving offers and for delivering it to users.}}
+    \resumeItem{\normalsize{Used Postgres for storing data and RabbitMQ for communicating between services.}}
+    \resumeItemListEnd
+        \resumeProjectHeading
+    {\textbf{\href{https://github.com/yasamprom/valentine}{\color{blue}Valentine's bot}} $|$ \emph{Python, AIogram, Asyncio, Docker, MongoDB}}{}
+          \resumeItemListStart
+            \resumeItem{\normalsize{Developed asynchronous telegram bot for sending and receiving anonymous valentines. Hosted bot on aws-server and connected MongoDB for storing user's data. Reached more than 3000 users and delivered around 3500 valentines.}}
+        \resumeItemListEnd
+
+    \resumeProjectHeading
+{\textbf{\href{https://github.com/yasamprom/fastapichat}{\color{blue}Fast api chat}} $|$ \emph{Python, Docker, fastapi}}{}
+        \resumeItemListStart
+          \resumeItem{\normalsize{Developed asynchronous fastapi chat. Followed CRUD principles. Tuned CI/CD. Wrote strong tests}}
+        \resumeItemListEnd
+
+
+    \resumeSubHeadingListEnd
+%--------------------------------------------------
+
+\section{Relevant courses}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+          {\textbf{Distributed systems(Python, Golang), Concurrency (c++)}}{}
+        \resumeProjectHeading
+          {\textbf{Advanced algorithms and data structures}}{}
+        \resumeProjectHeading
+          {\textbf{Computer's architecture and operation systems (assembly/C)}}{}
+    \resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, Go, C++} \\
+     \textbf{Skills}{: Git, Docker, docker-compose, SQL, ORM, MongoDB, fastapi, REST, RabbitMQ, protobuf, Linux, bash} \\
+    }}
+ \end{itemize}
+
+%--------------------------------------------------
+\section{Achievements}
+\resumeItemListStart
+\resumeItem{\normalsize{Moscow Mathematics
+		Olympiad, 2nd diploma}}
+\resumeItem{\normalsize{LeetCode 100+ (easy-medium)}}
+\resumeItem{\normalsize{Teacher's assistant on course of algorithms and data structures}}
+\resumeItemListEnd
+
+
+
+
+
+%-------------------------------------------
+\end{document}
