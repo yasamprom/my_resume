@@ -1,3 +1,7 @@
 *.log
 *.tex
 *.gz
+*.out
+*.aux
+.idea
+
